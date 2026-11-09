@@ -51,16 +51,10 @@
   col.c-type { width: 15%; } col.c-title { width: 31%; } col.c-collab { width: 15%; }
   col.c-venue { width: 21%; } col.c-date { width: 9%; } col.c-role { width: 9%; }
 
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .scroll table { min-width: 900px; }
   @media (max-width: 760px) {
     main { padding: 32px 16px 48px; }
-    table, thead, tbody, tr, td { display: block; }
-    colgroup, thead { display: none; }
-    tr { padding: 12px 0; border-bottom: 1px solid var(--rule); }
-    td { border: 0; padding: 2px 0; }
-    td.title { font-size: 1rem; padding-bottom: 4px; }
-    td:not(.title)::before {
-      content: attr(data-label) ": "; color: var(--muted);
-    }
   }
   @media print {
     :root { --ink:#000; --muted:#444; --rule:#bbb; --head:#eee; --accent:#000; --bg:#fff; }
@@ -78,53 +72,53 @@
 
   <section>
     <h2>Undergraduate <span>· 2012–2015</span></h2>
-    <table>
+    <div class="scroll"><table>
       <colgroup><col class="c-type"><col class="c-title"><col class="c-collab"><col class="c-venue"><col class="c-date"><col class="c-role"></colgroup>
       <thead><tr><th>Type</th><th>Title</th><th>Primary Collaborators</th><th>Venue</th><th>Date</th><th>Role</th></tr></thead>
       <tbody>
-        <tr><td data-label="Type">Peer-Reviewed Journal Paper</td><td class="title">Black Plane Solutions and Localized Gravitational Energy</td><td data-label="Collaborators">Paul Halpern</td><td data-label="Venue">International Scholarly Research Notices, vol. 2015</td><td class="date" data-label="Date">August 2015</td><td data-label="Role">Primary Author</td></tr>
-        <tr><td data-label="Type">Poster Presentation</td><td class="title">Comparison of Energy Distributions of Black Plane Solutions</td><td data-label="Collaborators">Paul Halpern</td><td data-label="Venue">100 Years of General Relativity Conference, Pennsylvania State University</td><td class="date" data-label="Date">July 2015</td><td data-label="Role">Speaker</td></tr>
+        <tr><td>Peer-Reviewed Journal Paper</td><td class="title">Black Plane Solutions and Localized Gravitational Energy</td><td>Paul Halpern</td><td>International Scholarly Research Notices, vol. 2015</td><td class="date">August 2015</td><td>Primary Author</td></tr>
+        <tr><td>Poster Presentation</td><td class="title">Comparison of Energy Distributions of Black Plane Solutions</td><td>Paul Halpern</td><td>100 Years of General Relativity Conference, Pennsylvania State University</td><td class="date">July 2015</td><td>Speaker</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <section>
     <h2>NASA Engineering <span>· 2015–2025</span></h2>
-    <table>
+    <div class="scroll"><table>
       <colgroup><col class="c-type"><col class="c-title"><col class="c-collab"><col class="c-venue"><col class="c-date"><col class="c-role"></colgroup>
       <thead><tr><th>Type</th><th>Title</th><th>Primary Collaborators</th><th>Venue</th><th>Date</th><th>Role</th></tr></thead>
       <tbody>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">The Evils of Pigtails</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Ottawa, ON)</td><td class="date" data-label="Date">August 2016</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Frequency Spectra of Transients</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (National Harbor, MD)</td><td class="date" data-label="Date">August 2017</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Conducted Transients on Spacecraft Primary Power Lines</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (National Harbor, MD)</td><td class="date" data-label="Date">August 2017</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Invited Talk</td><td class="title">Women in Physics – From Middle School to NASA</td><td data-label="Collaborators">N/A</td><td data-label="Venue">University of the Sciences (Philadelphia, PA)</td><td class="date" data-label="Date">July 2018</td><td data-label="Role">Speaker</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Bulk Cable Injection to Simulate Response to ESD Events on Spacecraft</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Long Beach, CA)</td><td class="date" data-label="Date">August 2018</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Common Mode Conducted Emissions Measurements – Pitfalls and How to Avoid Them</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (New Orleans, LA)</td><td class="date" data-label="Date">August 2019</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Workshop Session</td><td class="title">MIL-STD-461G And You: Requirements Tailoring for Space Applications</td><td data-label="Collaborators">Caroline Chan</td><td data-label="Venue">IEEE EMC+SIPI (New Orleans, LA)</td><td class="date" data-label="Date">August 2019</td><td data-label="Role">Chair</td></tr>
-        <tr><td data-label="Type">Working Group</td><td class="title">GSFC-STD-7000B Goddard Environmental Verification Standard (GEVS)</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">NASA GSFC</td><td class="date" data-label="Date">April 2021</td><td data-label="Role">Committee Member</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Common Mode Conducted Susceptibility Testing – A Simplified Method</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Spokane, WA)</td><td class="date" data-label="Date">August 2022</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Ask The Experts Panel</td><td class="title">Aerospace Battery Power System Design</td><td data-label="Collaborators">Finbar O'Connor</td><td data-label="Venue">EMA3D Expo</td><td class="date" data-label="Date">January 2023</td><td data-label="Role">Speaker</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Cabling and Shield Terminations</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date" data-label="Date">August 2023</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Workshop Chair</td><td class="title">Lessons Learned from NASA EMC</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date" data-label="Date">August 2023</td><td data-label="Role">Chair</td></tr>
-        <tr><td data-label="Type">Workshop Presentation</td><td class="title">PACE – Adventures In Magnetics</td><td data-label="Collaborators">N/A</td><td data-label="Venue">IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date" data-label="Date">August 2023</td><td data-label="Role">Speaker</td></tr>
-        <tr><td data-label="Type">Conference Demonstration</td><td class="title">Transmission Lines</td><td data-label="Collaborators">John McCloskey</td><td data-label="Venue">IEEE EMC+SIPI (Phoenix, AZ)</td><td class="date" data-label="Date">August 2024</td><td data-label="Role">Co-Author</td></tr>
-        <tr><td data-label="Type">Invited Talk</td><td class="title">Lessons Learned from NASA EMC / PACE Magnetics</td><td data-label="Collaborators">N/A</td><td data-label="Venue">Safran Electrical &amp; Power (Toulouse, FR)</td><td class="date" data-label="Date">January 2026</td><td data-label="Role">Speaker</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">The Evils of Pigtails</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Ottawa, ON)</td><td class="date">August 2016</td><td>Co-Author</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Frequency Spectra of Transients</td><td>John McCloskey</td><td>IEEE EMC+SIPI (National Harbor, MD)</td><td class="date">August 2017</td><td>Co-Author</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Conducted Transients on Spacecraft Primary Power Lines</td><td>John McCloskey</td><td>IEEE EMC+SIPI (National Harbor, MD)</td><td class="date">August 2017</td><td>Co-Author</td></tr>
+        <tr><td>Invited Talk</td><td class="title">Women in Physics – From Middle School to NASA</td><td>N/A</td><td>University of the Sciences (Philadelphia, PA)</td><td class="date">July 2018</td><td>Speaker</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Bulk Cable Injection to Simulate Response to ESD Events on Spacecraft</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Long Beach, CA)</td><td class="date">August 2018</td><td>Co-Author</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Common Mode Conducted Emissions Measurements – Pitfalls and How to Avoid Them</td><td>John McCloskey</td><td>IEEE EMC+SIPI (New Orleans, LA)</td><td class="date">August 2019</td><td>Co-Author</td></tr>
+        <tr><td>Workshop Session</td><td class="title">MIL-STD-461G And You: Requirements Tailoring for Space Applications</td><td>Caroline Chan</td><td>IEEE EMC+SIPI (New Orleans, LA)</td><td class="date">August 2019</td><td>Chair</td></tr>
+        <tr><td>Working Group</td><td class="title">GSFC-STD-7000B Goddard Environmental Verification Standard (GEVS)</td><td>John McCloskey</td><td>NASA GSFC</td><td class="date">April 2021</td><td>Committee Member</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Common Mode Conducted Susceptibility Testing – A Simplified Method</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Spokane, WA)</td><td class="date">August 2022</td><td>Co-Author</td></tr>
+        <tr><td>Ask The Experts Panel</td><td class="title">Aerospace Battery Power System Design</td><td>Finbar O'Connor</td><td>EMA3D Expo</td><td class="date">January 2023</td><td>Speaker</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Cabling and Shield Terminations</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date">August 2023</td><td>Co-Author</td></tr>
+        <tr><td>Workshop Chair</td><td class="title">Lessons Learned from NASA EMC</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date">August 2023</td><td>Chair</td></tr>
+        <tr><td>Workshop Presentation</td><td class="title">PACE – Adventures In Magnetics</td><td>N/A</td><td>IEEE EMC+SIPI (Grand Rapids, MI)</td><td class="date">August 2023</td><td>Speaker</td></tr>
+        <tr><td>Conference Demonstration</td><td class="title">Transmission Lines</td><td>John McCloskey</td><td>IEEE EMC+SIPI (Phoenix, AZ)</td><td class="date">August 2024</td><td>Co-Author</td></tr>
+        <tr><td>Invited Talk</td><td class="title">Lessons Learned from NASA EMC / PACE Magnetics</td><td>N/A</td><td>Safran Electrical &amp; Power (Toulouse, FR)</td><td class="date">January 2026</td><td>Speaker</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <section>
     <h2>Graduate (PhD) <span>· 2025–2028</span></h2>
-    <table>
+    <div class="scroll"><table>
       <colgroup><col class="c-type"><col class="c-title"><col class="c-collab"><col class="c-venue"><col class="c-date"><col class="c-role"></colgroup>
       <thead><tr><th>Type</th><th>Title</th><th>Primary Collaborators</th><th>Venue</th><th>Date</th><th>Role</th></tr></thead>
       <tbody>
-        <tr><td data-label="Type">Poster Paper</td><td class="title">Surrogate Modeling of Cable-to-Cable Crosstalk</td><td data-label="Collaborators">Philippe Besnier, Charles Jullien</td><td data-label="Venue">Industry-Academic Forum on EMC (Sønderborg, Denmark)</td><td class="date" data-label="Date">February 2026</td><td data-label="Role">Speaker</td></tr>
-        <tr><td data-label="Type">Invited Talk (Series)</td><td class="title">Eclipse Science</td><td data-label="Collaborators">Tim Robertson</td><td data-label="Venue">Wind Spirit (Barcelona, Italy)</td><td class="date" data-label="Date">August 2026</td><td data-label="Role">Primary Author</td></tr>
-        <tr><td data-label="Type">Workshop Presentation</td><td class="title">PATTERN DC3 Pitch</td><td data-label="Collaborators">Philippe Besnier, Charles Jullien</td><td data-label="Venue">EMC Europe (Prague, Czech Republic)</td><td class="date" data-label="Date">September 2026</td><td data-label="Role">Speaker</td></tr>
-        <tr><td data-label="Type">Working Group</td><td class="title">IEEE P2710</td><td data-label="Collaborators">Alistair Duffy, Anne Roc'h</td><td data-label="Venue">IEEE Standards</td><td class="date" data-label="Date">Not Yet Published</td><td data-label="Role">Committee Member</td></tr>
+        <tr><td>Poster Paper</td><td class="title">Surrogate Modeling of Cable-to-Cable Crosstalk</td><td>Philippe Besnier, Charles Jullien</td><td>Industry-Academic Forum on EMC (Sønderborg, Denmark)</td><td class="date">February 2026</td><td>Speaker</td></tr>
+        <tr><td>Invited Talk (Series)</td><td class="title">Eclipse Science</td><td>Tim Robertson</td><td>Wind Spirit (Barcelona, Italy)</td><td class="date">August 2026</td><td>Primary Author</td></tr>
+        <tr><td>Workshop Presentation</td><td class="title">PATTERN DC3 Pitch</td><td>Philippe Besnier, Charles Jullien</td><td>EMC Europe (Prague, Czech Republic)</td><td class="date">September 2026</td><td>Speaker</td></tr>
+        <tr><td>Working Group</td><td class="title">IEEE P2710</td><td>Alistair Duffy, Anne Roc'h</td><td>IEEE Standards</td><td class="date">Not Yet Published</td><td>Committee Member</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 </main>
 </body>
